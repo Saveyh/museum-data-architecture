@@ -33,37 +33,37 @@ Dans ce cas d'etude, la base centralise ces dimensions afin de fournir un socle 
 .
 |-- analytics/
 |   |-- archive/
-|   |   `-- groupe_8_requetes_legacy.sql
+|   |   `-- original_queries.sql
 |   |-- sql/
-|   |   |-- 01_collection_queries.sql
-|   |   `-- 02_bi_queries.sql
+|   |   |-- 01_operational_queries.sql
+|   |   `-- 02_business_intelligence_queries.sql
 |   `-- tableau/
-|       `-- groupe_8_visualisations.twb
+|       `-- museum_analytics_dashboard.twb
 |-- database/
 |   |-- archive/
-|   |   |-- groupe_8_donnees_legacy.sql
-|   |   `-- groupe_8_structure_bdd_legacy.sql
+|   |   |-- original_seed_data.sql
+|   |   `-- original_schema.sql
 |   |-- logic/
-|   |   |-- 01_trigger_verifier_annee_creation.sql
-|   |   `-- 02_view_vue_employes_roles.sql
+|   |   |-- 01_creation_year_validation_trigger.sql
+|   |   `-- 02_employee_roles_view.sql
 |   |-- schema/
-|   |   |-- 01_tables.sql
-|   |   `-- 02_indexes.sql
+|   |   |-- 01_core_tables.sql
+|   |   `-- 02_performance_indexes.sql
 |   `-- seeds/
-|       `-- 01_seed_data.sql
+|       `-- 01_museum_seed_data.sql
 |-- docs/
 |   |-- architecture/
-|   |   |-- groupe_8_model_conceptuel.drawio
-|   |   `-- groupe_8_model_relationnel.drawio
+|   |   |-- conceptual_data_model.drawio
+|   |   `-- relational_data_model.drawio
 |   |-- exports/
-|   |   `-- groupe_8_json.json
+|   |   `-- museum_sample_data.json
 |   |-- images/
 |   |   |-- architecture/
 |   |   `-- dashboards/
 |   |-- presentation/
-|   |   `-- groupe_8_presentation_finale.pptx
+|   |   `-- museum_database_case_study_deck.pptx
 |   `-- report/
-|       `-- groupe_8_rapport.pdf
+|       `-- museum_database_case_study_report.pdf
 |-- .gitignore
 `-- README.md
 ```
@@ -89,11 +89,11 @@ Placeholders pour les schemas a exporter depuis Draw.io:
 
 ### 1. Controle d'integrite avec trigger
 
-Le trigger [`verifier_annee_creation`](database/logic/01_trigger_verifier_annee_creation.sql) bloque l'insertion d'une oeuvre dont l'annee de creation serait posterieure a l'annee courante. C'est un bon exemple de controle metier au plus pres de la donnee: meme si une application cliente se trompe, la base refuse une incoherence patrimoniale evidente.
+Le trigger [`verifier_annee_creation`](database/logic/01_creation_year_validation_trigger.sql) bloque l'insertion d'une oeuvre dont l'annee de creation serait posterieure a l'annee courante. C'est un bon exemple de controle metier au plus pres de la donnee: meme si une application cliente se trompe, la base refuse une incoherence patrimoniale evidente.
 
 ### 2. Vue metier enrichie pour les ressources humaines
 
-La vue [`vue_employes_roles`](database/logic/02_view_vue_employes_roles.sql) consolide les employes avec leur role operationnel, leurs langues, leur etage d'affectation et leur expertise de restauration. Elle sert de couche de lecture pour:
+La vue [`vue_employes_roles`](database/logic/02_employee_roles_view.sql) consolide les employes avec leur role operationnel, leurs langues, leur etage d'affectation et leur expertise de restauration. Elle sert de couche de lecture pour:
 
 - identifier rapidement les guides multilingues,
 - visualiser la repartition des profils terrain,
@@ -101,7 +101,7 @@ La vue [`vue_employes_roles`](database/logic/02_view_vue_employes_roles.sql) con
 
 ### 3. Mesures metier sur l'occupation des salles
 
-La requete de densite dans [`analytics/sql/01_collection_queries.sql`](analytics/sql/01_collection_queries.sql) calcule le nombre d'oeuvres par metre carre et classe les salles par niveau d'occupation. Ce type d'indicateur est utile pour:
+La requete de densite dans [`analytics/sql/01_operational_queries.sql`](analytics/sql/01_operational_queries.sql) calcule le nombre d'oeuvres par metre carre et classe les salles par niveau d'occupation. Ce type d'indicateur est utile pour:
 
 - detecter les salles surchargees,
 - equilibrer les parcours visiteurs,
@@ -118,7 +118,7 @@ La requete de suivi des interventions met en avant l'activite de conservation da
 
 ## Business Intelligence avec Tableau
 
-Le classeur Tableau se trouve dans [`analytics/tableau/groupe_8_visualisations.twb`](analytics/tableau/groupe_8_visualisations.twb). Il exploite les requetes du dossier `analytics/sql` pour produire une lecture decisionnelle de la frequentation.
+Le classeur Tableau se trouve dans [`analytics/tableau/museum_analytics_dashboard.twb`](analytics/tableau/museum_analytics_dashboard.twb). Il exploite les requetes du dossier `analytics/sql` pour produire une lecture decisionnelle de la frequentation.
 
 ### Insights metier
 
@@ -145,9 +145,9 @@ Placeholders pour les captures d'ecran Tableau:
 
 Ordre recommande:
 
-1. [`database/schema/01_tables.sql`](database/schema/01_tables.sql)
-2. [`database/schema/02_indexes.sql`](database/schema/02_indexes.sql)
-3. [`database/seeds/01_seed_data.sql`](database/seeds/01_seed_data.sql)
-4. [`database/logic/01_trigger_verifier_annee_creation.sql`](database/logic/01_trigger_verifier_annee_creation.sql)
-5. [`database/logic/02_view_vue_employes_roles.sql`](database/logic/02_view_vue_employes_roles.sql)
+1. [`database/schema/01_core_tables.sql`](database/schema/01_core_tables.sql)
+2. [`database/schema/02_performance_indexes.sql`](database/schema/02_performance_indexes.sql)
+3. [`database/seeds/01_museum_seed_data.sql`](database/seeds/01_museum_seed_data.sql)
+4. [`database/logic/01_creation_year_validation_trigger.sql`](database/logic/01_creation_year_validation_trigger.sql)
+5. [`database/logic/02_employee_roles_view.sql`](database/logic/02_employee_roles_view.sql)
 6. Requetes analytiques dans [`analytics/sql`](analytics/sql)
