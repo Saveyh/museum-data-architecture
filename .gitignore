@@ -1,0 +1,48 @@
+# OS and editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Database artefacts
+*.db
+*.sqlite
+*.sqlite3
+*.sql.gz
+*.dump
+*.dmp
+*.ibd
+*.frm
+*.myd
+*.myi
+
+# Tableau local extracts and cache
+*.hyper
+*.tde
+*.twb~
+*.twbr
+tableau_log/
+
+# Draw.io local backups
+*.drawio.bak
+*.drawio.dtmp
+*.drawio.tmp
+
+# Python cache
+__pycache__/
+.pytest_cache/
