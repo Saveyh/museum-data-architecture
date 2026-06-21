@@ -145,13 +145,3 @@ Ordre recommande:
 4. [`database/logic/01_trigger_verifier_annee_creation.sql`](database/logic/01_trigger_verifier_annee_creation.sql)
 5. [`database/logic/02_view_vue_employes_roles.sql`](database/logic/02_view_vue_employes_roles.sql)
 6. Requetes analytiques dans [`analytics/sql`](analytics/sql)
-
-## Pourquoi ce projet est pertinent en portfolio
-
-Ce depot montre une combinaison de competences rarement visible dans un projet SQL "academique" standard:
-
-- modelisation relationnelle avec specialisation d'entites,
-- usage de contraintes, index et logique base de donnees,
-- separation claire entre couche transactionnelle et couche analytique,
-- traduction d'un besoin metier en indicateurs actionnables,
-- articulation entre SQL et visualisation BI.
