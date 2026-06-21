@@ -82,8 +82,8 @@ Les entites centrales sont:
 
 Placeholders pour les schemas a exporter depuis Draw.io:
 
-![Modele conceptuel](docs/images/architecture/modele-conceptuel.png)
-![Modele relationnel](docs/images/architecture/modele-relationnel.png)
+![Modele conceptuel](docs/images/architecture/model-conceptuel.png)
+![Modele relationnel](docs/images/architecture/model-relationnel.png)
 
 ## Details techniques et fonctionnalites cles
 
