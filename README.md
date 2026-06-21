@@ -1,4 +1,4 @@
-# Musee d'art du canton de Neuchatel - Data Engineering Case Study
+# Musee d'art - Data Engineering Case Study
 
 Ce projet presente la conception d'une base de donnees relationnelle pour un musee d'art, pensee comme un cas d'usage realiste de pilotage des collections, des expositions, des equipes et de la frequentation visiteurs. Le depot a ete restructure comme une vitrine technique orientee portfolio afin de demontrer des competences en modelisation de donnees, SQL avance et Business Intelligence avec Tableau.
 
