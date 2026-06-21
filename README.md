@@ -126,21 +126,6 @@ Le classeur Tableau se trouve dans [`analytics/tableau/museum_analytics_dashboar
 - L'affluence hebdomadaire est relativement stable, avec un plateau a `15` visiteurs du lundi au jeudi, puis un leger retrait le vendredi (`14`) et le week-end (`13`).
 - La provenance geographique est bien repartie dans le canton, avec une concentration marquee sur les codes postaux `2072` et `2074` (`9` visiteurs chacun). Cette lecture est utile pour cibler des actions de communication locale.
 
-Placeholders pour les captures d'ecran Tableau:
-
-![Dashboard - mix guide vs libre](docs/images/dashboards/dashboard-visites-guidees.png)
-![Dashboard - affluence hebdomadaire](docs/images/dashboards/dashboard-affluence-semaine.png)
-![Dashboard - provenance geographique](docs/images/dashboards/dashboard-provenance-neuchatel.png)
-
-## Requetes portfolio a mettre en avant
-
-- Couverture linguistique des guides pour adapter les visites a la demande internationale.
-- Densite d'oeuvres par salle pour piloter l'occupation des espaces.
-- Programmation des expositions avec nombre d'oeuvres exposees et duree.
-- Matrice des roles employes via la vue metier.
-- Repartition des restaurations par type d'intervention.
-- Segmentation visiteurs pour les dashboards BI.
-
 ## Execution
 
 Ordre recommande:
