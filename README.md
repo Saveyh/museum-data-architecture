@@ -1,4 +1,16 @@
 # Musee d'art - Data Engineering Case Study
+![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-4479A1?logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Advanced-336791?logo=postgresql&logoColor=white)
+![Database Design](https://img.shields.io/badge/Database-Modeling-0F766E?logo=databricks&logoColor=white)
+![Triggers](https://img.shields.io/badge/SQL-Triggers-8B0000?logo=mysql&logoColor=white)
+![Views](https://img.shields.io/badge/SQL-Views-1D4ED8?logo=mysql&logoColor=white)
+![Business Intelligence](https://img.shields.io/badge/BI-Business%20Intelligence-7C3AED?logo=powerbi&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-Dashboard-E97627?logo=tableau&logoColor=white)
+![Data Analytics](https://img.shields.io/badge/Data-Analytics-059669?logo=googleanalytics&logoColor=white)
+![Data Modeling](https://img.shields.io/badge/Data-Modeling-2563EB?logo=diagramsdotnet&logoColor=white)
+![Draw.io](https://img.shields.io/badge/Draw.io-ERD%20%26%20MCD-F08705?logo=diagramsdotnet&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-Export-000000?logo=json&logoColor=white)
+![Portfolio Project](https://img.shields.io/badge/Project-Portfolio-111827?logo=github&logoColor=white)
 
 Ce projet presente la conception d'une base de donnees relationnelle pour un musee d'art, pensee comme un cas d'usage realiste de pilotage des collections, des expositions, des equipes et de la frequentation visiteurs. Le depot a ete restructure comme une vitrine technique orientee portfolio afin de demontrer des competences en modelisation de donnees, SQL avance et Business Intelligence avec Tableau.
 
